@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Center - Avtomobil Markazi</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg width='250' height='250' viewBox='0 0 250 250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='125' cy='125' r='120' stroke='%232563EB' stroke-width='10'/%3E%3Cpath d='M60 160 L100 100 L150 160 L190 100' stroke='%232563EB' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='85' cy='160' r='12' fill='%232563EB'/%3E%3Ccircle cx='165' cy='160' r='12' fill='%232563EB'/%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563EB",
+              secondary: "#64748B",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              pacifico: ["Pacifico", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100 flex">
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="w-64 shadow-lg flex flex-col fixed top-0 left-0 h-screen z-30 bg-gradient-to-b from-blue-900 to-blue-700 transition-transform duration-300 transform -translate-x-full md:translate-x-0"
+    >
+      <div class="p-6 border-b border-blue-600">
+        <div class="flex items-center gap-3">
+          <i class="ri-steering-2-line text-3xl text-white"></i>
+          <h1 class="text-2xl font-pacifico text-white">Car Center</h1>
+        </div>
+        <p class="text-sm text-white/80 mt-1 font-pacifico">
+          We have the best.
+        </p>
+      </div>
+
+      <nav class="flex-1 p-4 overflow-y-auto">
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="./index.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600"
+            >
+              <i
+                class="ri-dashboard-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Home Page
+            </a>
+          </li>
+          <li>
+            <a
+              href="./car.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600"
+            >
+              <i
+                class="ri-car-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Cars
+            </a>
+          </li>
+          <li>
+            <a
+              href="./category.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600"
+            >
+              <i
+                class="ri-shape-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Category
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 text-white bg-blue-700 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-500"
+            >
+              <i
+                class="ri-team-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Clients
+            </a>
+          </li>
+          <li>
+            <a
+              href="./admin.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600"
+            >
+              <i
+                class="ri-admin-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Admins
+            </a>
+          </li>
+          <li>
+            <a
+              href="./profile.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600"
+            >
+              <i
+                class="ri-user-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              My Profile
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="p-4 border-t border-blue-600 mt-auto">
+        <h3 class="text-white font-bold mb-3 text-sm">Qo‘llab-quvvatlash</h3>
+        <p class="flex items-center text-sm text-white/90">
+          <i class="ri-phone-line text-blue-300 mr-2"></i>
+          +998 90 123 45 67
+        </p>
+        <p class="flex items-center text-sm text-white/90 mt-1">
+          <i class="ri-mail-line text-blue-300 mr-2"></i>
+          support@carcenter.uz
+        </p>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-1 flex flex-col ml-0 md:ml-64">
+      <!-- Sticky Header -->
+      <header
+        class="bg-white shadow-sm border-b border-gray-200 px-6 py-4 sticky top-0 z-20"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-3xl font-semibold mb-1">Mijozlar</h1>
+            <div class="flex items-center space-x-2">
+              <p class="text-gray-600 mb-0">
+                Barcha mijozlar ro'yhati va ma'lumotlari
+              </p>
+              <span class="text-blue-700 font-semibold text-base"
+                >• Client Page</span
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="mt-6 px-8">
+
+        <div
+          class="bg-white rounded-lg shadow-sm border border-gray-100 p-8 mb-8"
+        >
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-1 relative">
+              <div
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center"
+              >
+                <i class="ri-search-line text-gray-400"></i>
+              </div>
+              <input
+                type="text"
+                placeholder="Mijozlar va ular ma'lumotlari orqali qidirish..."
+                class="w-full pl-12 pr-4 py-3 border bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 transition-all text-sm bg-gray-50"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-md border hover:shadow-lg transition flex flex-col items-center w-full max-w-lg mx-auto"
+          >
+            <img
+              src="https://picsum.photos/250?random=1"
+              alt="Bobur Rahimov"
+              class="w-36 h-36 rounded-full mb-4 object-cover"
+            />
+            <div class="text-center mb-4">
+              <h3 class="font-bold text-xl">Bobur Rahimov</h3>
+              <p
+                class="text-sm text-green-500 flex items-center justify-center"
+              >
+                <span class="w-3 h-3 rounded-full bg-green-500 mr-1"></span>
+                Aktiv
+              </p>
+            </div>
+            <ul class="text-gray-600 space-y-2 text-sm text-center">
+              <li class="flex items-center justify-center">
+                <i class="ri-phone-line text-blue-500 mr-2"></i>+998 90 123 45 67
+              </li>
+              <li class="flex items-center justify-center">
+                <i class="ri-mail-line text-blue-500 mr-2"></i>bobur@gmail.com
+              </li>
+              <li class="flex items-center justify-center">
+                <i class="ri-car-line text-blue-500 mr-2"></i>Toyota Camry 2020
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="../checkA.js"></script>
+    <script src="./client.js"></script>
+  </body>
+</html>

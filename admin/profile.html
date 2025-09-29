@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Center - Avtomobil Markazi</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg width='250' height='250' viewBox='0 0 250 250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='125' cy='125' r='120' stroke='%232563EB' stroke-width='10'/%3E%3Cpath d='M60 160 L100 100 L150 160 L190 100' stroke='%232563EB' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='85' cy='160' r='12' fill='%232563EB'/%3E%3Ccircle cx='165' cy='160' r='12' fill='%232563EB'/%3E%3C/svg%3E"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563EB",
+              secondary: "#64748B",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              pacifico: ["Pacifico", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100 flex">
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="w-64 shadow-lg flex flex-col fixed top-0 left-0 h-screen z-30 bg-gradient-to-b from-blue-900 to-blue-900 transition-transform duration-300 transform -translate-x-full md:translate-x-0"
+    >
+      <div class="p-6 border-b border-blue-900">
+        <div class="flex items-center gap-3">
+          <i class="ri-steering-2-line text-3xl text-white"></i>
+          <h1 class="text-2xl font-pacifico text-white">Car Center</h1>
+        </div>
+        <p class="text-sm text-white/80 mt-1 font-pacifico">
+          We have the best.
+        </p>
+      </div>
+
+      <nav class="flex-1 p-4 overflow-y-auto">
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="./index.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-900"
+            >
+              <i
+                class="ri-dashboard-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Home Page
+            </a>
+          </li>
+          <li>
+            <a
+              href="./car.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-900"
+            >
+              <i
+                class="ri-car-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Cars
+            </a>
+          </li>
+          <li>
+            <a
+              href="./category.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-900"
+            >
+              <i
+                class="ri-shape-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Category
+            </a>
+          </li>
+          <li>
+            <a
+              href="./client.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-900"
+            >
+              <i
+                class="ri-team-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Clients
+            </a>
+          </li>
+          <li>
+            <a
+              href="./admin.html"
+              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-900"
+            >
+              <i
+                class="ri-admin-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              Admins
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 text-white bg-blue-900 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-900"
+            >
+              <i
+                class="ri-user-line w-5 h-5 mr-3 flex items-center justify-center"
+              ></i>
+              My Profile
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="p-4 border-t border-blue-900 mt-auto">
+        <h3 class="text-white font-bold mb-3 text-sm">Qo‘llab-quvvatlash</h3>
+        <p class="flex items-center text-sm text-white/90">
+          <i class="ri-phone-line text-blue-300 mr-2"></i>
+          +998 90 123 45 67
+        </p>
+        <p class="flex items-center text-sm text-white/90 mt-1">
+          <i class="ri-mail-line text-blue-300 mr-2"></i>
+          support@carcenter.uz
+        </p>
+      </div>
+
+    
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-1 flex flex-col ml-0 md:ml-64">
+      <div class="px-10 pt-10">
+        <h1 class="text-3xl font-semibold mb-1">Mening Profilim</h1>
+        <div class="flex items-center space-x-2">
+          <p class="text-gray-600 mb-0">
+            Mening ma'lumotlarim va ularni tahrirlash
+          </p>
+          <span class="text-blue-900 font-semibold text-base">• My Profile</span>
+        </div>
+      </div>
+      <div class="p-8 w-full">
+        <div
+          class="bg-blue-900 text-white rounded-xl shadow-md p-6 flex flex-col md:flex-row items-center gap-6"
+        >
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <img
+                src="https://picsum.photos/250?random=1"
+                alt="Jasur Karimov"
+                class="w-24 h-24 rounded-full border-4 border-white object-cover"
+              />
+              <span
+                class="absolute bottom-1 right-1 bg-white p-1 rounded-full text-blue-900"
+              >
+                <i class="ri-camera-line text-lg"></i>
+              </span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">Jasur Karimov</h2>
+              <p class="text-white/80">Premium mijoz</p>
+              <p class="text-sm text-yellow-300 mt-1 flex items-center gap-1">
+                <i class="ri-star-fill"></i>
+                4.9 reyting
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+          <div class="bg-white p-6 rounded-xl shadow-md border">
+            <div class="flex items-center gap-2 mb-4">
+              <i class="ri-user-line text-xl text-blue-900"></i>
+              <h3 class="font-bold text-gray-700">Shaxsiy ma'lumotlar</h3>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-center p-3 rounded-lg bg-gray-50 border">
+                <i class="ri-mail-line text-blue-900 mr-3"></i>
+                <div>
+                  <p class="text-sm text-gray-500">Email manzil</p>
+                  <p class="font-medium">jasur.karimov@email.com</p>
+                </div>
+              </div>
+              <div class="flex items-center p-3 rounded-lg bg-gray-50 border">
+                <i class="ri-phone-line text-blue-900 mr-3"></i>
+                <div>
+                  <p class="text-sm text-gray-500">Telefon raqam</p>
+                  <p class="font-medium">+998 90 123 45 67</p>
+                </div>
+              </div>
+              <div class="flex items-center p-3 rounded-lg bg-gray-50 border">
+                <i class="ri-map-pin-line text-blue-900 mr-3"></i>
+                <div>
+                  <p class="text-sm text-gray-500">Manzil</p>
+                  <p class="font-medium">Toshkent sh., Chilonzor tumani</p>
+                </div>
+              </div>
+              <div class="flex items-center p-3 rounded-lg bg-gray-50 border">
+                <i class="ri-calendar-line text-blue-900 mr-3"></i>
+                <div>
+                  <p class="text-sm text-gray-500">Ro'yxatdan o'tgan sana</p>
+                  <p class="font-medium">15 Mart, 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+        </div>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <button
+            class="flex items-center gap-2 bg-blue-900 text-white rounded-lg px-6 py-3 hover:bg-blue-900 transition-colors"
+          >
+            <i class="ri-edit-line"></i>
+            Profilni tahrirlash
+          </button>
+          <button
+            class="flex items-center gap-2 bg-gray-200 text-gray-700 rounded-lg px-6 py-3 hover:bg-gray-300 transition-colors"
+          >
+            <i class="ri-lock-line"></i>
+            Parolni o'zgartirish
+          </button>
+          
+          <button
+            class="flex items-center gap-2 bg-gray-200 text-gray-700 rounded-lg px-6 py-3 hover:bg-gray-300 transition-colors"
+          >
+            <i class="ri-logout-box-r-line"></i>
+            Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="../checkA.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>
