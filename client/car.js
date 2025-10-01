@@ -47,7 +47,7 @@ function handleRenderCar(cars){
 
         <div class="p-6">
           <div class="flex items-center justify-between mb-3">
-            <h3 class="text-xl font-bold text-gray-900">${car.modelName}</h3>
+            <h3 class="text-xl font-bold text-gray-900"> < ${car.brandName} >  ${car.modelName}</h3>
             <span class="text-lg font-semibold text-blue-500">${car.year}</span>
           </div>
 

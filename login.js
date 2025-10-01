@@ -69,23 +69,18 @@ function togglePasswordVisibility(id) {
 function verifyToken(token) {
   try {
     const payload = jwt_decode(token);
-    console.log("🔑 Token payload:", payload);
 
     const now = Math.floor(Date.now() / 1000);
     if (payload.exp < now) {
-      alert("⚠️ Token muddati tugagan. Qayta login qiling.");
-      localStorage.removeItem("token");
-      window.location.href = "/login";
+
       return;
     };
     if (payload.role === "admin") {
-      window.location.href = "/admin/admin.html";
+      window.location.href = "/admin/index.html";
     } else {
       window.location.href = "/client/index.html";
     }
   } catch (err) {
     console.error("Tokenni tekshirishda xato:", err);
-    localStorage.removeItem("token");
-    window.location.href = "/login";
   }
 }

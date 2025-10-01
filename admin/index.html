@@ -1,170 +1,238 @@
-
 <!DOCTYPE html>
 <html lang="uz">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car Center - Avtomobil Markazi</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg width='250' height='250' viewBox='0 0 250 250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='125' cy='125' r='120' stroke='%232563EB' stroke-width='10'/%3E%3Cpath d='M60 160 L100 100 L150 160 L190 100' stroke='%232563EB' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='85' cy='160' r='12' fill='%232563EB'/%3E%3Ccircle cx='165' cy='160' r='12' fill='%232563EB'/%3E%3C/svg%3E"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#2563EB",
-              secondary: "#64748B",
-            },
-            borderRadius: {
-              none: "0px",
-              sm: "4px",
-              DEFAULT: "8px",
-              md: "12px",
-              lg: "16px",
-              xl: "20px",
-              "2xl": "24px",
-              "3xl": "32px",
-              full: "9999px",
-              button: "8px",
-            },
-            fontFamily: {
-              inter: ["Inter", "sans-serif"],
-              pacifico: ["Pacifico", "serif"],
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Center - Avtomobil Markazi</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg width='250' height='250' viewBox='0 0 250 250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='125' cy='125' r='120' stroke='%232563EB' stroke-width='10'/%3E%3Cpath d='M60 160 L100 100 L150 160 L190 100' stroke='%232563EB' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='85' cy='160' r='12' fill='%232563EB'/%3E%3Ccircle cx='165' cy='160' r='12' fill='%232563EB'/%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563EB",
+            secondary: "#64748B",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+            pacifico: ["Pacifico", "serif"],
           },
         },
-      };
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-gray-100 flex">
+  <!-- Sidebar -->
+  <div id="sidebar"
+    class="w-64 shadow-lg flex flex-col fixed top-0 left-0 h-screen z-30 bg-gradient-to-b from-blue-900 to-blue-700 transition-transform duration-300 transform -translate-x-full md:translate-x-0">
+    <div class="p-6 border-b border-blue-600">
+      <div class="flex items-center gap-3">
+        <i class="ri-steering-2-line text-3xl text-white"></i>
+        <h1 class="text-2xl font-pacifico text-white">Car Center</h1>
+      </div>
+      <p class="text-sm text-white/80 mt-1 font-pacifico">
+        We have the best.
+      </p>
+      <!-- <div style="margin-top: 20px;">
+        <a href="" class="Href" style="color: red;"> LOGIN PAGE</a>
+
+      </div> -->
+    </div>
+
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <ul class="space-y-2">
+        <li>
+          <a href="#"
+            class="flex items-center px-4 py-3 text-white bg-blue-700 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-500">
+            <i class="ri-dashboard-line w-5 h-5 mr-3 flex items-center justify-center"></i>
+            Home Page
+          </a>
+        </li>
+        <li>
+          <a href="./car.html"
+            class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600">
+            <i class="ri-car-line w-5 h-5 mr-3 flex items-center justify-center"></i>
+            Cars
+          </a>
+        </li>
+
+
+
+
+      </ul>
+    </nav>
+
+    <div class="p-4 border-t border-blue-600 mt-auto">
+      <h3 class="text-white font-bold mb-3 text-sm">Qo‘llab-quvvatlash</h3>
+      <p class="flex items-center text-sm text-white/90">
+        <i class="ri-phone-line text-blue-300 mr-2"></i>
+        +998 90 123 45 67
+      </p>
+      <p class="flex items-center text-sm text-white/90 mt-1">
+        <i class="ri-mail-line text-blue-300 mr-2"></i>
+        support@carcenter.uz
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Main content -->
+  <div class="flex-1 flex flex-col ml-0 md:ml-64">
+    <!-- Sticky Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200 px-6 py-4 sticky top-0 z-20">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-3xl font-semibold mb-1">
+            Car Center - Avtomobil Markazi
+          </h1>
+          <div class="flex items-center space-x-2">
+            <p class="text-gray-600 mb-0">
+              Professional avtomobil xizmatlari va savdo markazi
+            </p>
+            <span class="text-blue-700 font-semibold text-base">• Home Page</span>
+          </div>
+        </div>
+
+
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="p-6 overflow-y-auto">
+
+
+      <div class="">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <h2 class="text-xl font-bold mb-4">Mashhur Kategoriyalar</h2>
+            <button id="openModal" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              style="margin-left: 600px;">
+              Category Add Modal +
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" id="cBody" style="margin-top: 40px;;">
+
+
+        </div>
+
+        <!-- <div style="border: 1px solid black; width: 600px; height: 300px;">
+            <form style="border: 1px solid black;">
+
+              <input type="text" placeholder="logo">
+              <input type="file">
+            </form>
+          </div>
+             -->
+
+
+
+        <!-- Modal (hidden by default) -->
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+          <div class="bg-white rounded-lg shadow-lg p-6 w-96 relative">
+            <h2 class="text-xl font-bold mb-4">Add Category</h2>
+
+            <!-- Form -->
+            <form class="categoryForm space-y-4">
+              <!-- Category name -->
+              <div>
+                <label for="categoryName" class="block text-sm font-medium text-gray-700 mb-1">
+                  Category Name
+                </label>
+                <input id="categoryName" type="text" placeholder="Enter category name"
+                  class="categoryNames w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+
+              <!-- Category image -->
+              <div>
+                <label for="categoryImage" class="block text-sm font-medium text-gray-700 mb-1">
+                  Category Image
+                </label>
+                <input id="categoryImage" type="file" accept="image/*"
+                  class="categoryImages w-full border border-gray-300 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex justify-end space-x-2 pt-4">
+                <button type="button" id="closeModal"
+                  class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">
+                  Cancel
+                </button>
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                  Yuborish
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </main>
+    <script>
+      const openModal = document.getElementById("openModal");
+      const modal = document.getElementById("modal");
+      const closeModal = document.getElementById("closeModal");
+
+      // Modalni ochish
+      openModal.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      });
+
+      // Modalni yopish (Close tugma)
+      closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      });
+
+      // Modal tashqarisiga bosilganda yopish
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }
+      });
+
+      // Esc tugmasi bosilganda yopish
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }
+      });
     </script>
-  </head>
-  <body class="bg-gray-100 flex">
-    <!-- Sidebar -->
-    <div
-      id="sidebar"
-      class="w-64 shadow-lg flex flex-col fixed top-0 left-0 h-screen z-30 bg-gradient-to-b from-blue-900 to-blue-700 transition-transform duration-300 transform -translate-x-full md:translate-x-0"
-    >
-      <div class="p-6 border-b border-blue-600">
-        <div class="flex items-center gap-3">
-          <i class="ri-steering-2-line text-3xl text-white"></i>
-          <h1 class="text-2xl font-pacifico text-white">Car Center</h1>
-        </div>
-        <p class="text-sm text-white/80 mt-1 font-pacifico">
-          We have the best.
-        </p>
-      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+  <script src="../checkA.js"></script>
+  <script src="./index.js"></script>
+</body>
 
-      <nav class="flex-1 p-4 overflow-y-auto">
-        <ul class="space-y-2">
-          <li>
-            <a
-              href="#"
-              class="flex items-center px-4 py-3 text-white bg-blue-700 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-500"
-            >
-              <i
-                class="ri-dashboard-line w-5 h-5 mr-3 flex items-center justify-center"
-              ></i>
-              Home Page
-            </a>
-          </li>
-          <li>
-            <a
-              href="./car.html"
-              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600"
-            >
-              <i
-                class="ri-car-line w-5 h-5 mr-3 flex items-center justify-center"
-              ></i>
-              Cars
-            </a>
-          </li>
-          <li>
-            <a
-              href="./category.html"
-              class="flex items-center px-4 py-3 text-white rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600"
-            >
-              <i
-                class="ri-shape-line w-5 h-5 mr-3 flex items-center justify-center"
-              ></i>
-              Category
-            </a>
-          </li>
-         
-         
-          
-        </ul>
-      </nav>
-
-      <div class="p-4 border-t border-blue-600 mt-auto">
-        <h3 class="text-white font-bold mb-3 text-sm">Qo‘llab-quvvatlash</h3>
-        <p class="flex items-center text-sm text-white/90">
-          <i class="ri-phone-line text-blue-300 mr-2"></i>
-          +998 90 123 45 67
-        </p>
-        <p class="flex items-center text-sm text-white/90 mt-1">
-          <i class="ri-mail-line text-blue-300 mr-2"></i>
-          support@carcenter.uz
-        </p>
-      </div>
-
-    </div>
-
-    <!-- Main content -->
-    <div class="flex-1 flex flex-col ml-0 md:ml-64">
-      <!-- Sticky Header -->
-      <header
-        class="bg-white shadow-sm border-b border-gray-200 px-6 py-4 sticky top-0 z-20"
-      >
-        <div class="flex items-center justify-between">
-          <div>
-            <h1 class="text-3xl font-semibold mb-1">
-              Car Center - Avtomobil Markazi
-            </h1>
-            <div class="flex items-center space-x-2">
-              <p class="text-gray-600 mb-0">
-                Professional avtomobil xizmatlari va savdo markazi
-              </p>
-              <span class="text-blue-700 font-semibold text-base"
-                >• Home Page</span
-              >
-            </div>
-          </div>
-
-          
-        </div>
-      </header>
-
-      <!-- Main content area -->
-      <main class="p-6 overflow-y-auto">
-      
-
-        <div class="mt-6 bg-white rounded-xl shadow-md border p-6">
-          <h2 class="text-xl font-bold mb-4">Mashhur Kategoriyalar</h2>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" id="cBody">
-            
-
-
-
-          </div>
-        </div>
-      </main>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
-    <script src="../checkA.js"></script>
-    <script src="./index.js"></script>
-  </body>
 </html>

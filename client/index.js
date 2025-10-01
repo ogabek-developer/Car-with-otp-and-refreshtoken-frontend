@@ -47,7 +47,7 @@ function handleRenderCategory(data){
         <div class="absolute inset-0 bg-gray-700 bg-opacity-20"></div>
       </div>
       <p class="font-bold text-lg mb-1">${cat.name}</p>
-      <p class="text-gray-500 text-sm text-center">${cat.count || 0}+ model mavjud</p>
+      
     `;
 
     gridWrapper.appendChild(catDiv);
